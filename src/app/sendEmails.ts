@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend("re_i3q1EZYo_NRYzHvEX5EnrwNqmjHYLyHoA");
+const resend = new Resend(`${process.env.RESEND_API_KEY}`);
 
 export type ContactFormData = {
   email: string;
