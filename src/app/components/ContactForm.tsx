@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaWindowClose } from "react-icons/fa";
-import { ContactFormData } from "../sendEmails";
+import { ContactFormData } from "../api/send/route";
 
 type ModalProps = {
   onClose: () => void;
