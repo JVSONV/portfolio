@@ -3,7 +3,6 @@
 import { useContext, useRef } from "react";
 import { ModalContext } from "@/app/context/ModalCtxProvider";
 import { FaWindowClose } from "react-icons/fa";
-import { sendEmail } from "../sendEmails";
 import ContactForm from "./ContactForm";
 
 const Modal = () => {
