@@ -30,14 +30,18 @@ const ContactForm = (props: ModalProps) => {
     <form
       className="contact"
       method="dialog"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        sendEmail(contactData);
+        const formResponse = await fetch("/api/send", {
+          method: "POST",
+          body: JSON.stringify(contactData),
+        });
         setContactData({
           name: "",
           email: "",
           message: "",
         });
+        console.log(formResponse);
         props.onClose();
       }}
     >
